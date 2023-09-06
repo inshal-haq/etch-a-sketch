@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 
+// create 16x16 square grid
 for (let row = 1; row <= 16; row++) {
   const rowContainer = document.createElement('div');
   rowContainer.classList.add('row');
@@ -11,3 +12,11 @@ for (let row = 1; row <= 16; row++) {
     rowContainer.appendChild(box);
   }
 }
+
+// on mouse enter, turn box red
+const boxes = document.querySelectorAll('.box');
+boxes.forEach(box => {
+  box.addEventListener('mouseenter', () => {
+    box.style.backgroundColor = 'red';
+  });
+});
