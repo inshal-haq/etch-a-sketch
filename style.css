@@ -7,18 +7,24 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .row {
+  width: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .box {
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
+}
+
+#changeGridBtn {
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
