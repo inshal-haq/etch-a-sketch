@@ -39,7 +39,7 @@ function drawGrid() {
   const boxes = document.querySelectorAll('.box');
   boxes.forEach(box => {
     box.addEventListener('mouseenter', () => {
-      box.style.backgroundColor = 'red';
+      box.style.backgroundColor = randomRgbColor();
     });
   });
 }
@@ -47,4 +47,11 @@ function drawGrid() {
 function removeGrid() {
   const rows = document.querySelectorAll('.row');
   rows.forEach(row => row.remove());
+}
+
+function randomRgbColor() {
+  let r = Math.floor(Math.random() * 256); 
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
