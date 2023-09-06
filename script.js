@@ -38,8 +38,13 @@ function drawGrid() {
   // on mouse enter, turn box red
   const boxes = document.querySelectorAll('.box');
   boxes.forEach(box => {
+    let opacity = 0.1;
     box.addEventListener('mouseenter', () => {
-      box.style.backgroundColor = randomRgbColor();
+      // increase opacity progressively by 10%
+      if (opacity !== 1) opacity += 0.1;
+
+      box.style.backgroundColor = `rgba(${randomRgbColor()},${opacity})`;
+      // box.style.backgroundColor = `rgba(0,0,0,${opacity})`;
     });
   });
 }
@@ -53,5 +58,5 @@ function randomRgbColor() {
   let r = Math.floor(Math.random() * 256); 
   let g = Math.floor(Math.random() * 256);
   let b = Math.floor(Math.random() * 256);
-  return 'rgb(' + r + ',' + g + ',' + b + ')';
+  return r + ',' + g + ',' + b;
 }
