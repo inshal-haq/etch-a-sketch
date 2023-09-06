@@ -1,2 +1,2 @@
-# etch-a-sketch
-Etch-a-Sketch
+# odin-etch-a-sketch
+Odin Etch-a-Sketch
